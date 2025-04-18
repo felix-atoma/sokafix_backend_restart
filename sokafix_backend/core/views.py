@@ -35,3 +35,5 @@ def list_messages(request):
     messages = ContactMessage.objects.all().order_by('-created_at')
     serializer = ContactMessageSerializer(messages, many=True)
     return Response(serializer.data)
+# Force redeploy
+
